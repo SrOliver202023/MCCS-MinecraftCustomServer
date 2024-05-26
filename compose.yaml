@@ -1,0 +1,13 @@
+services:
+  mcserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mcserver
+    hostname: mcserver
+    ports:
+      - "25565:25565"
+    volumes:
+      - mcserver_data:/usr/app/minecraft
+volumes:
+  mcserver_data:
